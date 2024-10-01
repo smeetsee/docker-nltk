@@ -1,3 +1,4 @@
-FROM python:3.12
+FROM ghcr.io/smeetsee/docker-python-data-processing:main
 
-RUN python -m pip install --no-cache-dir pandas numpy xlrd
+RUN python -m pip install textstat nltk
+RUN python -m nltk.downloader all
